@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script src="script.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  
+  <title>Calculadora</title>
+</head>
+<body>
+  <div id="app">
+    <div id="display">
+        <span data-last-operation id="last-operation">1+1</span>
+        <div id="result">
+          <img src="./assets/equals.svg" alt="Sinal de igual">
+          <span data-result><strong>2</strong></span>
+        </div>
+    </div>
+    <div id="keyboard">
+      <button data-ce class="ce">CE</button>
+      <button data-clear>C</button>
+      <button data-operator-percent>%</button>
+      <button data-operator-divide class="operators" >
+        <img src="./assets/divide.svg" alt="Sinal de divisao">
+      </button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operator-multiply class="operators">
+        <img src="./assets/multiply.svg" alt="Sinal de multiplicacao">
+      </button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operator-minus class="operators">
+        <img src="./assets/minus.svg" alt="Sinal de menos">
+      </button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operator-plus class="operators">
+        <img src="./assets/add.svg" alt="Sinal de mais">
+      </button>
+      <button data-operator-minusplus>
+        <img src="./assets/plusminus.svg" alt="Sinal de mais e de menos">
+      </button>
+      <button data-number>0</button>
+      <button data-number>,</button>
+      <button data-equals class="operators">
+        <img src="./assets/result.svg" alt="Sinal de igual para o resultado">
+      </button>
+    </div>
+  </div>
+</body>
+</html>
