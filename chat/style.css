@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-sizing: border-box;
+  --webkit-font-smoothing: antialiased; // chrome, safari
+  --moz-osx-font-smoothing: grayscale; // firefox
+}
+
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background-color: #1A1924;
+  font-size: 1.6rem; /* because we change the font's proportion to 1.0rem we need to maintain the consistence to the other elements */
+  color: #E1E1E6;
+  heigth: 100vh;
+  overflow: hidden; // no vertical neither horizontal scroll
+}
+
+body * {
+  //border: 0.1rem solid red; 
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  padding: 2.4rem 3.2rem;
+
+  height: 100vh;
+  width: 100vw;
+  max-width: 880px; // for desktop view
+
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  margin: auto; // for desktop view
+}
+
+#top { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+#user-info img {
+  height: 4.8rem;
+  width: 4.8rem;
+  object-fit: cover;
+  border-radius: 5.0rem;
+}
+
+#user-status .status {
+  display: flex;
+  align-items: baseline;
+  gap: .4rem;
+
+  margin-top: 0.4rem;
+}
+
+#user-status .status::before {
+  content: '';
+  width: 0.8rem;
+  height: 0.8rem;
+  display: block;
+  background-color: #00B37E;
+  border-radius: 50%;
+}
+
+#user-status .status {
+  color: #00B37E;
+  font-size: 1.2rem;
+}
+
+#last-seen {
+  margin-top: 2.6rem;
+  text-align: center;
+
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+#messages {
+  overflow-y: scroll; 
+  padding-bottom: 2.4rem;
+}
+
+#messages::-webkit-scrollbar {
+  display: none; // disappear with scrollbar 
+}
+
+.messages {
+  margin-top: 3rem;
+  display: grid;
+  gap: 3rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.message .body {
+  margin-top: 1rem;
+  background-color: #633BBC;
+  padding: 1.4rem;
+  border-radius: 0rem .8rem .8rem .8rem;
+  width: fit-content;
+}
+
+.message:not(.you) {
+  width: 60vw;
+}
+
+.message.you {
+  margin-left: auto;
+}
+
+.message.you .top {
+  text-align: right;
+}
+
+.message.you .body {
+  background-color: #07847E;
+  border-radius: .8rem .8rem 0rem .8rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  background: #282843;
+  border-radius: 99.9rem;
+  padding: 1.4rem 2.4rem;
+}
+
+input {
+  flex: 1;
+  outline: none;
+  color: #E1E1E6;
+}
+
+form:focus-within {
+  outline: 2px solid white;
+}
+
+input::placeholder {
+  color: #E1E1E6;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+button i {
+  color: #E1E1E6;
+  font-size: 2.4rem; // not width/height because the phosphor's lib works with font-size instead of width/height
+}
+
+input, button {
+  background-color: transparent;
+  border: 0;
+}
